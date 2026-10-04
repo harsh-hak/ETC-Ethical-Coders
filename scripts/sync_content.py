@@ -54,6 +54,7 @@ def sync_writeups():
             if 'stego' in content.lower(): tags.append('Stego')
 
             slug = fname.replace('.md', '').lower().replace(' ', '-').replace('_', '-')
+            github_url = f"https://github.com/harsh-hak/ETC-Ethical-Coders/blob/main/Tryhackme/{fname}"
 
             writeups.append({
                 'id': slug,
@@ -63,96 +64,49 @@ def sync_writeups():
                 'category': category,
                 'tags': list(dict.fromkeys(tags))[:5],
                 'snippet': snippet,
-                'fullContent': content
+                'githubUrl': github_url
             })
 
     # Write back to webpage/js/writeups.js
     js_content = f"""/**
- * ETC (Ethical Coders) - Writeups Catalog & Modal Reader
+ * ETC (Ethical Coders) - Writeups Catalog
  * Auto-synced from Tryhackme/ markdown files
+ * Each writeup opens directly in the GitHub repository window
  */
 
 export const writeupsData = {json.dumps(writeups, indent=2)};
 
 export function initWriteups() {{
   const container = document.getElementById('writeups-grid-container');
-  const modal = document.getElementById('writeup-modal');
-  const modalTitle = document.getElementById('modal-title-text');
-  const modalBody = document.getElementById('modal-body-content');
-  const closeModalBtn = document.getElementById('btn-close-modal');
-
   if (!container) return;
 
-  function renderCards() {{
-    container.innerHTML = '';
+  container.innerHTML = '';
 
-    writeupsData.forEach(item => {{
-      const card = document.createElement('div');
-      card.className = 'writeup-card reveal';
-      card.innerHTML = `
-        <div class="writeup-card-header">
-          <span class="writeup-platform">${{item.platform}}</span>
-          <span class="writeup-date">${{item.date}}</span>
+  writeupsData.forEach(item => {{
+    const card = document.createElement('a');
+    card.className = 'writeup-card reveal';
+    card.href = item.githubUrl;
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.setAttribute('title', `Open ${{item.title}} on GitHub`);
+
+    card.innerHTML = `
+      <div class="writeup-card-header">
+        <span class="writeup-platform">${{item.platform}}</span>
+        <span class="writeup-date">${{item.date}}</span>
+      </div>
+      <h3 class="writeup-title">${{item.title}}</h3>
+      <p class="writeup-snippet">${{item.snippet}}</p>
+      <div class="writeup-meta-footer">
+        <div class="writeup-tags">
+          ${{item.tags.slice(0, 3).map(t => `<span class="skill-tag">#${{t}}</span>`).join('')}}
         </div>
-        <h3 class="writeup-title">${{item.title}}</h3>
-        <p class="writeup-snippet">${{item.snippet}}</p>
-        <div class="writeup-meta-footer">
-          <div class="writeup-tags">
-            ${{item.tags.slice(0, 3).map(t => `<span class="skill-tag">#${{t}}</span>`).join('')}}
-          </div>
-          <span class="writeup-read-action">Read Writeup →</span>
-        </div>
-      `;
+        <span class="writeup-read-action">Read Writeup ↗</span>
+      </div>
+    `;
 
-      card.addEventListener('click', () => openModal(item));
-      container.appendChild(card);
-    }});
-  }}
-
-  function openModal(item) {{
-    if (!modal || !modalTitle || !modalBody) return;
-    modalTitle.textContent = item.title;
-    
-    let html = item.fullContent
-      .replace(/!\\[(.*?)\\]\\((.*?)\\)/gim, '<div style="margin: 20px 0; text-align: center;"><img src="$2" alt="$1" style="max-width: 100%; height: auto; border: 2px solid var(--border-dark); box-shadow: var(--shadow-brutal-sm);"><br><em style="font-size: 12px; color: var(--text-muted);">$1</em></div>')
-      .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-      .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-      .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-      .replace(/\\*\\*(.*?)\\*\\*/gim, '<strong>$1</strong>')
-      .replace(/\\*(.*?)\\*/gim, '<em>$1</em>')
-      .replace(/```bash([\\s\\S]*?)```/gim, '<pre><code>$1</code></pre>')
-      .replace(/```([\\s\\S]*?)```/gim, '<pre><code>$1</code></pre>')
-      .replace(/`([^`]+)`/gim, '<code>$1</code>')
-      .replace(/\\n\\n/gim, '<br><br>');
-
-    // Relative image links from webpage/ to Tryhackme/assets
-    html = html.replace(/src="assets\\//gim, 'src="../Tryhackme/assets/');
-
-    modalBody.innerHTML = html;
-    modal.classList.add('is-active');
-    document.body.style.overflow = 'hidden';
-  }}
-
-  function closeModal() {{
-    if (!modal) return;
-    modal.classList.remove('is-active');
-    document.body.style.overflow = 'auto';
-  }}
-
-  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-  if (modal) {{
-    modal.addEventListener('click', (e) => {{
-      if (e.target === modal) closeModal();
-    }});
-  }}
-
-  window.addEventListener('keydown', (e) => {{
-    if (e.key === 'Escape' && modal && modal.classList.contains('is-active')) {{
-      closeModal();
-    }}
+    container.appendChild(card);
   }});
-
-  renderCards();
 }}
 """
 

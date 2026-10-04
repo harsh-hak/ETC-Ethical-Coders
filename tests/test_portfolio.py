@@ -48,17 +48,15 @@ def test_all_devices():
         assert member_cards.count() == 6, f"Expected 6 members, got {member_cards.count()}"
         print(f"Verified {member_cards.count()} team members!")
         
-        # Check Writeup Modal Reader
+        # Check Writeup Cards & GitHub Redirection Links
         writeup_cards = page_desk.locator('.writeup-card')
         assert writeup_cards.count() >= 3
-        writeup_cards.first.click()
-        time.sleep(0.4)
-        modal = page_desk.locator('#writeup-modal')
-        assert modal.is_visible(), "Writeup modal should open"
-        page_desk.locator('#btn-close-modal').click()
-        time.sleep(0.3)
-        assert not modal.is_visible(), "Writeup modal closed"
-        print("Writeup modal reader verified!")
+        first_card_href = writeup_cards.first.get_attribute('href')
+        first_card_target = writeup_cards.first.get_attribute('target')
+        print(f"First writeup link: {first_card_href} (target: {first_card_target})")
+        assert "github.com/harsh-hak/ETC-Ethical-Coders/blob/main/Tryhackme/" in first_card_href
+        assert first_card_target == "_blank"
+        print("Writeup cards direct GitHub link verified!")
         
         page_desk.screenshot(path='tests/screenshots/desktop_portfolio.png', full_page=True)
         print("Saved Desktop screenshot.")
