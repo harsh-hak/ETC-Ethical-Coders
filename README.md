@@ -1,1 +1,1 @@
-# ETC-Ethical-Coders-
+# ETC-Ethical-Coders
