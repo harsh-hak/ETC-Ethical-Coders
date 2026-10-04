@@ -29,5 +29,4 @@ Tryhackme/
 │       ├── 03_makefile_inspection_defect.png
 │       ├── 04_libnss_directory_creation.png
 │       └── 05_root_privilege_escalation_proof.png
-└── [Original PDF files]
 ```
