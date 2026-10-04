@@ -30,16 +30,17 @@ def test_all_devices():
         logo = page_desk.locator('.brand-logo-img')
         assert logo.is_visible(), "Brand logo is visible"
         
-        # Verify Navigation links are clean (no [01] numbers)
+        # Verify Navigation links are clean and have MEMBERS
         nav_text = page_desk.locator('.nav-links').inner_text()
         print(f"Nav Links: {nav_text.replace(chr(10), ' | ')}")
         assert "ABOUT" in nav_text
+        assert "MEMBERS" in nav_text
         assert "[01]" not in nav_text
         
         # Check 6 team members
         member_cards = page_desk.locator('.member-card')
         assert member_cards.count() == 6, f"Expected 6 members, got {member_cards.count()}"
-        print(f"Verified {member_cards.count()} team operatives!")
+        print(f"Verified {member_cards.count()} team members!")
         
         # Check Writeup Modal Reader
         writeup_cards = page_desk.locator('.writeup-card')
@@ -53,7 +54,7 @@ def test_all_devices():
         assert not modal.is_visible(), "Writeup modal closed"
         print("Writeup modal reader verified!")
         
-        # Check Command Arsenal Search
+        # Check Command Search
         search_input = page_desk.locator('#arsenal-search-input')
         search_input.fill('nmap')
         time.sleep(0.3)
@@ -64,8 +65,8 @@ def test_all_devices():
         cmd_cards.first.locator('.btn-copy-cmd').click()
         time.sleep(0.4)
         toast = page_desk.locator('#toast-notification')
-        print("Toast notification class:", toast.get_attribute('class'))
-        print("Arsenal search and copy toast verified!")
+        assert 'is-visible' in toast.get_attribute('class')
+        print("Command search and copy toast verified!")
         
         page_desk.screenshot(path='tests/screenshots/desktop_portfolio.png', full_page=True)
         print("Saved Desktop screenshot.")
