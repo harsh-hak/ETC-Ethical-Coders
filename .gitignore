@@ -1,0 +1,15 @@
+# System & Editor files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
