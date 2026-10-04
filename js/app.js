@@ -3,12 +3,10 @@
  */
 
 import { initWriteups } from './writeups.js';
-import { initArsenal } from './arsenal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Submodules
+  // 1. Initialize Writeups Module
   initWriteups();
-  initArsenal();
 
   // 2. Mobile Navigation Toggle
   const mobileToggleBtn = document.getElementById('btn-mobile-menu');
@@ -46,24 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
-
-  // 4. Global Command Search Shortcut (Ctrl+K or Cmd+K)
-  const searchInput = document.getElementById('arsenal-search-input');
-  window.addEventListener('keydown', (e) => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-      e.preventDefault();
-      if (searchInput) {
-        searchInput.focus();
-        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  });
-
-  const headerSearchBtn = document.getElementById('btn-header-search');
-  if (headerSearchBtn && searchInput) {
-    headerSearchBtn.addEventListener('click', () => {
-      searchInput.focus();
-      searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-  }
 });

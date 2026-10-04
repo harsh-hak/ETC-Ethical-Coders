@@ -37,15 +37,10 @@
           <li><a href="#about" class="nav-link">ABOUT</a></li>
           <li><a href="#team" class="nav-link">MEMBERS</a></li>
           <li><a href="#writeups" class="nav-link">WRITEUPS</a></li>
-          <li><a href="#arsenal" class="nav-link">COMMANDS</a></li>
         </ul>
 
         <!-- Navigation Actions -->
         <div class="nav-actions">
-          <button class="btn-search-trigger" id="btn-header-search" title="Quick Command Search">
-            <span>SEARCH</span>
-            <kbd class="search-kbd">Ctrl+K</kbd>
-          </button>
           <a href="https://github.com/harsh-hak/ETC-Ethical-Coders" target="_blank" rel="noopener noreferrer" class="btn-primary">
             GITHUB ↗
           </a>
@@ -66,7 +61,6 @@
       <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
       <li><a href="#team" class="mobile-nav-link">MEMBERS</a></li>
       <li><a href="#writeups" class="mobile-nav-link">WRITEUPS</a></li>
-      <li><a href="#arsenal" class="mobile-nav-link">COMMANDS</a></li>
       <li><a href="https://github.com/harsh-hak/ETC-Ethical-Coders" target="_blank" class="mobile-nav-link" style="color: var(--c-jordy);">GITHUB REPO ↗</a></li>
     </ul>
   </div>
@@ -281,34 +275,11 @@
             <button class="filter-btn" data-filter="tryhackme">TRYHACKME</button>
             <button class="filter-btn" data-filter="linux">LINUX GUIDES</button>
             <button class="filter-btn" data-filter="web">WEB GUIDES</button>
-            <button class="filter-btn" data-filter="arsenal">CHEAT SHEETS</button>
           </div>
         </div>
 
         <div class="writeups-grid" id="writeups-grid-container">
           <!-- Populated by js/writeups.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Command Arsenal Section -->
-    <section class="section" id="arsenal" style="background: rgba(30, 46, 79, 0.2);">
-      <div class="app-container">
-        <div class="section-header reveal">
-          <span class="brutalist-tag">// CHEAT SHEET</span>
-          <h2 class="section-title">Helpful Security Commands</h2>
-          <p>A quick search tool of common commands used during cybersecurity learning and practice.</p>
-        </div>
-
-        <div class="arsenal-container reveal">
-          <div class="arsenal-search-box">
-            <span style="color: var(--c-jordy); font-family: var(--font-mono); font-weight: 700;">$ SEARCH:</span>
-            <input type="text" id="arsenal-search-input" class="arsenal-search-input" placeholder="search commands by tool, category (recon, privesc, shells, web), or syntax...">
-          </div>
-
-          <div class="arsenal-grid" id="arsenal-grid-container">
-            <!-- Populated by js/arsenal.js -->
-          </div>
         </div>
       </div>
     </section>

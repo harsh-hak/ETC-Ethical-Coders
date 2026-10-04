@@ -54,20 +54,6 @@ def test_all_devices():
         assert not modal.is_visible(), "Writeup modal closed"
         print("Writeup modal reader verified!")
         
-        # Check Command Search
-        search_input = page_desk.locator('#arsenal-search-input')
-        search_input.fill('nmap')
-        time.sleep(0.3)
-        cmd_cards = page_desk.locator('.cmd-card')
-        assert cmd_cards.count() >= 2
-        
-        # Check Copy button
-        cmd_cards.first.locator('.btn-copy-cmd').click()
-        time.sleep(0.4)
-        toast = page_desk.locator('#toast-notification')
-        assert 'is-visible' in toast.get_attribute('class')
-        print("Command search and copy toast verified!")
-        
         page_desk.screenshot(path='tests/screenshots/desktop_portfolio.png', full_page=True)
         print("Saved Desktop screenshot.")
 

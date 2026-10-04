@@ -97,6 +97,7 @@ export function initWriteups() {
     modalTitle.textContent = item.title;
     
     let html = item.fullContent
+      .replace(/!\[(.*?)\]\((.*?)\)/gim, '<div style="margin: 20px 0; text-align: center;"><img src="$2" alt="$1" style="max-width: 100%; height: auto; border: 2px solid var(--c-yinmn);"><br><em style="font-size: 12px; color: var(--text-muted);">$1</em></div>')
       .replace(/^### (.*$)/gim, '<h3>$1</h3>')
       .replace(/^## (.*$)/gim, '<h2>$1</h2>')
       .replace(/^# (.*$)/gim, '<h1>$1</h1>')
@@ -106,6 +107,9 @@ export function initWriteups() {
       .replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>')
       .replace(/`([^`]+)`/gim, '<code>$1</code>')
       .replace(/\n\n/gim, '<br><br>');
+
+    // Fix relative image links if they point inside Tryhackme
+    html = html.replace(/src="assets\//gim, 'src="Tryhackme/assets/');
 
     modalBody.innerHTML = html;
     modal.classList.add('is-active');
