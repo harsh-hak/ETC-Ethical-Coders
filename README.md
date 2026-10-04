@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://wa.me/918700158124?text=Hey%20I%20want%20to%20join%20Ethical%20Coders%20team">
-    <img src="https://img.shields.io/badge/Join%20Us%20on%20WhatsApp-%2B91%208700158124-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Join Us on WhatsApp" />
+  <a href="https://www.linkedin.com/in/harsh-kanojia369/">
+    <img src="https://img.shields.io/badge/Message%20on%20LinkedIn-Harsh%20Kanojia-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Message on LinkedIn" />
   </a>
 </p>
 
@@ -30,7 +30,6 @@
 - [Join Us](#-join-us)
 - [Team Members](#-team-members)
 - [CTF Walkthroughs & Playbooks](#-ctf-walkthroughs--playbooks)
-- [Repository Structure](#-repository-structure)
 - [Educational & Ethics Notice](#-educational--ethics-notice)
 
 ---
@@ -47,15 +46,15 @@
 
 ## 💬 Join Us
 
-Interested in learning cybersecurity, solving CTF challenges, or collaborating with us?
+Interested in learning cybersecurity, solving CTF challenges, or collaborating with us? Reach out directly to our team lead on LinkedIn:
 
 <p align="center">
-  <a href="https://wa.me/918700158124?text=Hey%20I%20want%20to%20join%20Ethical%20Coders%20team">
-    <img src="https://img.shields.io/badge/Chat%20With%20Us%20on%20WhatsApp-%2B91%208700158124-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Chat" />
+  <a href="https://www.linkedin.com/in/harsh-kanojia369/">
+    <img src="https://img.shields.io/badge/Message%20on%20LinkedIn-Harsh%20Kanojia-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Message on LinkedIn" />
   </a>
 </p>
 
-> Send us a message directly on WhatsApp: **`+91 8700158124`** (*"Hey I want to join Ethical Coders team"*).
+> Connect with us directly on LinkedIn: [**Harsh Kanojia (harsh-kanojia369)**](https://www.linkedin.com/in/harsh-kanojia369/).
 
 ---
 
@@ -72,7 +71,13 @@ Meet the six students and friends who make up **ETC (Ethical Coders)**:
       <em>// Linux & System Security</em><br><br>
       Coordinates team challenges, writes step-by-step walkthroughs, and explores how Linux systems and networks operate under the hood.<br><br>
       <code>#TeamLead</code> <code>#Linux</code> <code>#SystemSecurity</code><br><br>
-      🔗 <strong><a href="https://harsh-hak.github.io/">Portfolio / LinkedIn ↗</a></strong>
+      <a href="https://harsh-hak.github.io/">
+        <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-0056B3?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" />
+      </a>
+      &nbsp;
+      <a href="https://www.linkedin.com/in/harsh-kanojia369/">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+      </a>
     </td>
     <td align="center" width="50%">
       <img src="assets/images/avatars/kevil.svg" width="75" height="75" alt="Kevil" /><br>
@@ -132,41 +137,6 @@ All of our writeups and playbooks are written in markdown with embedded screensh
 | **CatPictures-II Walkthrough** | Full CTF Report | TryHackMe | Image metadata stego, OliveTin RCE, LinPEAS, CVE-2021-3156 (Baron Samedit) root privilege escalation with screenshots | [Read Guide ↗](Tryhackme/CatPictures-II_Full_Walkthrough.md) |
 | **U.A. High School Playbook** | Command Playbook | TryHackMe | Reconnaissance, Web command injection, Magic bytes header repair, `eval` sudo root escalation | [Read Guide ↗](Tryhackme/UA_High_School_CTF_Command_Playbook.md) |
 | **CTF Command Arsenal** | 10-Phase Cheat Sheet | All Platforms | Comprehensive command reference: Nmap, Gobuster, Ffuf, Reverse shells, Steghide, Hashcat, LinPEAS, GTFOBins | [Read Guide ↗](Tryhackme/CTF_Command_Arsenal.md) |
-
----
-
-## 📁 Repository Structure
-
-```text
-ETC (Ethical Coders)/
-├── README.md                                       # Main Team Portfolio & Documentation
-├── .gitignore                                      # Ignores PDF files & build artifacts
-│
-├── assets/
-│   └── images/                                     # Vector graphics & team member avatars
-│       ├── logo.svg                                # Official ETC Logo Emblem
-│       ├── logo.png                                # Transparent raster logo
-│       └── avatars/                                # 6 Vector avatars for team members
-│           ├── harsh.svg                           # Harsh Kanojia
-│           ├── kevil.svg                           # Kevil
-│           ├── shloka.svg                          # Shloka
-│           ├── zalak.svg                           # Zalak
-│           ├── dhyey.svg                           # Dhyey
-│           └── dhruvraj.svg                        # Dhruvraj
-│
-└── Tryhackme/                                      # CTF Walkthroughs, Playbooks & Screenshots
-    ├── README.md                                   # TryHackMe directory index
-    ├── CatPictures-II_Full_Walkthrough.md          # Full room walkthrough with embedded screenshots
-    ├── UA_High_School_CTF_Command_Playbook.md      # Step-by-step command playbook
-    ├── CTF_Command_Arsenal.md                      # 10-phase pentest & CTF command cheat sheet
-    └── assets/
-        └── catpictures-ii/                         # High-resolution walkthrough screenshots
-            ├── 01_home_bismuth_directory_listing.png
-            ├── 02_initial_compilation_failure.png
-            ├── 03_makefile_inspection_defect.png
-            ├── 04_libnss_directory_creation.png
-            └── 05_root_privilege_escalation_proof.png
-```
 
 ---
 
