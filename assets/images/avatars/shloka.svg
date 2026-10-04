@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
-  <defs>
-    <linearGradient id="grad-shloka" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D9E1F1" />
-      <stop offset="100%" stop-color="#8FB3E2" />
-    </linearGradient>
-  </defs>
-  <rect width="200" height="200" fill="#192338" rx="12" />
-  <rect x="10" y="10" width="180" height="180" stroke="#31487A" stroke-width="2" fill="#1E2E4F" rx="8" />
-  <path d="M100 40 L145 60 C145 110 100 155 100 155 C100 155 55 110 55 60 Z" stroke="url(#grad-shloka)" stroke-width="3" fill="#192338" />
-  <circle cx="100" cy="85" r="14" stroke="#8FB3E2" stroke-width="2.5" fill="none" />
-  <path d="M100 99 L100 122 M93 112 L107 112 M93 120 L107 120" stroke="#D9E1F1" stroke-width="2.5" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200"><defs><linearGradient id="grad-shloka" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#D9E1F1"/><stop offset="100%" stop-color="#8FB3E2"/></linearGradient></defs><rect width="200" height="200" fill="#192338" rx="12"/><rect width="180" height="180" x="10" y="10" fill="#1E2E4F" stroke="#31487A" stroke-width="2" rx="8"/><path fill="#192338" stroke="url(#grad-shloka)" stroke-width="3" d="M100 40 L145 60 C145 110 100 155 100 155 C100 155 55 110 55 60 Z"/><circle cx="100" cy="85" r="14" fill="none" stroke="#8FB3E2" stroke-width="2.5"/><path stroke="#D9E1F1" stroke-width="2.5" d="M100 99 L100 122 M93 112 L107 112 M93 120 L107 120"/></svg>
