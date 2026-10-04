@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
-  <defs>
-    <linearGradient id="grad-zalak" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D9E1F1" />
-      <stop offset="100%" stop-color="#8FB3E2" />
-    </linearGradient>
-  </defs>
-  <rect width="200" height="200" fill="#192338" rx="12" />
-  <rect x="10" y="10" width="180" height="180" stroke="#31487A" stroke-width="2" fill="#1E2E4F" rx="8" />
-  <circle cx="90" cy="90" r="35" stroke="url(#grad-zalak)" stroke-width="4" fill="#192338" />
-  <line x1="115" y1="115" x2="150" y2="150" stroke="url(#grad-zalak)" stroke-width="6" stroke-linecap="square" />
-  <path d="M70 90 L80 75 L90 105 L100 80 L110 90" stroke="#8FB3E2" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" />
-  <circle cx="90" cy="90" r="20" stroke="#31487A" stroke-width="1.5" stroke-dasharray="3 3" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200"><defs><linearGradient id="grad-zalak" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#D9E1F1"/><stop offset="100%" stop-color="#8FB3E2"/></linearGradient></defs><rect width="200" height="200" fill="#192338" rx="12"/><rect width="180" height="180" x="10" y="10" fill="#1E2E4F" stroke="#31487A" stroke-width="2" rx="8"/><circle cx="90" cy="90" r="35" fill="#192338" stroke="url(#grad-zalak)" stroke-width="4"/><line x1="115" x2="150" y1="115" y2="150" stroke="url(#grad-zalak)" stroke-linecap="square" stroke-width="6"/><path stroke="#8FB3E2" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2.5" d="M70 90 L80 75 L90 105 L100 80 L110 90"/><circle cx="90" cy="90" r="20" stroke="#31487A" stroke-dasharray="3 3" stroke-width="1.5"/></svg>

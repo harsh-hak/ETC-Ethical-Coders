@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
-  <defs>
-    <linearGradient id="grad-harsh" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D9E1F1" />
-      <stop offset="100%" stop-color="#8FB3E2" />
-    </linearGradient>
-  </defs>
-  <rect width="200" height="200" fill="#192338" rx="12" />
-  <rect x="10" y="10" width="180" height="180" stroke="#31487A" stroke-width="2" fill="#1E2E4F" rx="8" />
-  <polygon points="100,30 160,65 160,135 100,170 40,135 40,65" stroke="#8FB3E2" stroke-width="2" fill="none" stroke-dasharray="6 4" />
-  <path d="M70 85 L95 105 L70 125" stroke="url(#grad-harsh)" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter" />
-  <line x1="105" y1="125" x2="135" y2="125" stroke="url(#grad-harsh)" stroke-width="5" stroke-linecap="square" />
-  <circle cx="100" cy="55" r="4" fill="#8FB3E2" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200"><defs><linearGradient id="grad-harsh" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#D9E1F1"/><stop offset="100%" stop-color="#8FB3E2"/></linearGradient></defs><rect width="200" height="200" fill="#192338" rx="12"/><rect width="180" height="180" x="10" y="10" fill="#1E2E4F" stroke="#31487A" stroke-width="2" rx="8"/><polygon fill="none" stroke="#8FB3E2" stroke-dasharray="6 4" stroke-width="2" points="100 30 160 65 160 135 100 170 40 135 40 65"/><path stroke="url(#grad-harsh)" stroke-linecap="square" stroke-linejoin="miter" stroke-width="5" d="M70 85 L95 105 L70 125"/><line x1="105" x2="135" y1="125" y2="125" stroke="url(#grad-harsh)" stroke-linecap="square" stroke-width="5"/><circle cx="100" cy="55" r="4" fill="#8FB3E2"/></svg>

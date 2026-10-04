@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
-  <defs>
-    <linearGradient id="grad-dhruvraj" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D9E1F1" />
-      <stop offset="100%" stop-color="#8FB3E2" />
-    </linearGradient>
-  </defs>
-  <rect width="200" height="200" fill="#192338" rx="12" />
-  <rect x="10" y="10" width="180" height="180" stroke="#31487A" stroke-width="2" fill="#1E2E4F" rx="8" />
-  <circle cx="100" cy="100" r="45" stroke="#31487A" stroke-width="1.5" stroke-dasharray="4 4" />
-  <circle cx="100" cy="100" r="30" stroke="url(#grad-dhruvraj)" stroke-width="2" />
-  <circle cx="100" cy="100" r="15" stroke="#8FB3E2" stroke-width="1.5" />
-  <circle cx="100" cy="100" r="4" fill="#D9E1F1" />
-  <line x1="100" y1="100" x2="140" y2="70" stroke="url(#grad-dhruvraj)" stroke-width="3" />
-  <circle cx="138" cy="72" r="4" fill="#8FB3E2" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200"><defs><linearGradient id="grad-dhruvraj" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#D9E1F1"/><stop offset="100%" stop-color="#8FB3E2"/></linearGradient></defs><rect width="200" height="200" fill="#192338" rx="12"/><rect width="180" height="180" x="10" y="10" fill="#1E2E4F" stroke="#31487A" stroke-width="2" rx="8"/><circle cx="100" cy="100" r="45" stroke="#31487A" stroke-dasharray="4 4" stroke-width="1.5"/><circle cx="100" cy="100" r="30" stroke="url(#grad-dhruvraj)" stroke-width="2"/><circle cx="100" cy="100" r="15" stroke="#8FB3E2" stroke-width="1.5"/><circle cx="100" cy="100" r="4" fill="#D9E1F1"/><line x1="100" x2="140" y1="100" y2="70" stroke="url(#grad-dhruvraj)" stroke-width="3"/><circle cx="138" cy="72" r="4" fill="#8FB3E2"/></svg>

@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
-  <defs>
-    <linearGradient id="grad-kevil" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D9E1F1" />
-      <stop offset="100%" stop-color="#8FB3E2" />
-    </linearGradient>
-  </defs>
-  <rect width="200" height="200" fill="#192338" rx="12" />
-  <rect x="10" y="10" width="180" height="180" stroke="#31487A" stroke-width="2" fill="#1E2E4F" rx="8" />
-  <rect x="60" y="60" width="80" height="80" stroke="url(#grad-kevil)" stroke-width="3" fill="#192338" />
-  <rect x="75" y="75" width="50" height="50" stroke="#31487A" stroke-width="2" fill="#1E2E4F" />
-  <path d="M88 88 L112 112 M112 88 L88 112" stroke="#8FB3E2" stroke-width="3" stroke-linecap="square" />
-  <path d="M80 45 L80 60 M100 45 L100 60 M120 45 L120 60" stroke="#8FB3E2" stroke-width="2.5" />
-  <path d="M80 140 L80 155 M100 140 L100 155 M120 140 L120 155" stroke="#8FB3E2" stroke-width="2.5" />
-  <path d="M45 80 L60 80 M45 100 L60 100 M45 120 L60 120" stroke="#8FB3E2" stroke-width="2.5" />
-  <path d="M140 80 L155 80 M140 100 L155 100 M140 120 L155 120" stroke="#8FB3E2" stroke-width="2.5" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200"><defs><linearGradient id="grad-kevil" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#D9E1F1"/><stop offset="100%" stop-color="#8FB3E2"/></linearGradient></defs><rect width="200" height="200" fill="#192338" rx="12"/><rect width="180" height="180" x="10" y="10" fill="#1E2E4F" stroke="#31487A" stroke-width="2" rx="8"/><rect width="80" height="80" x="60" y="60" fill="#192338" stroke="url(#grad-kevil)" stroke-width="3"/><rect width="50" height="50" x="75" y="75" fill="#1E2E4F" stroke="#31487A" stroke-width="2"/><path stroke="#8FB3E2" stroke-linecap="square" stroke-width="3" d="M88 88 L112 112 M112 88 L88 112"/><path stroke="#8FB3E2" stroke-width="2.5" d="M80 45 L80 60 M100 45 L100 60 M120 45 L120 60"/><path stroke="#8FB3E2" stroke-width="2.5" d="M80 140 L80 155 M100 140 L100 155 M120 140 L120 155"/><path stroke="#8FB3E2" stroke-width="2.5" d="M45 80 L60 80 M45 100 L60 100 M45 120 L60 120"/><path stroke="#8FB3E2" stroke-width="2.5" d="M140 80 L155 80 M140 100 L155 100 M140 120 L155 120"/></svg>
