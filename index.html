@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ETC (Ethical Coders) - Elite CTF Team, Cyber Security Research, and Penetration Testing Portfolio.">
+  <meta name="theme-color" content="#060B14">
+  <title>ETC (Ethical Coders) — CTF & Security Research Team</title>
+
+  <!-- Google Fonts: Playfair Display & Josefin Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Ambient Glow Elements -->
+  <div class="ambient-glow ambient-glow-orange" style="top: -100px; left: 50%; transform: translateX(-50%);"></div>
+  <div class="ambient-glow ambient-glow-navy" style="top: 800px; right: -100px;"></div>
+  <div class="ambient-glow ambient-glow-orange" style="top: 1800px; left: -100px;"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="app-container">
+      <nav class="nav-inner" aria-label="Main Navigation">
+        <a href="#hero" class="brand-logo-link">
+          <img src="assets/images/logo.png" alt="ETC Logo" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-title">ETC</span>
+            <span class="brand-tagline">Ethical Coders</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#team" class="nav-link">Operatives</a></li>
+          <li><a href="#writeups" class="nav-link">Writeups</a></li>
+          <li><a href="#arsenal" class="nav-link">Arsenal</a></li>
+          <li><a href="#platforms" class="nav-link">Platforms</a></li>
+        </ul>
+
+        <!-- Navigation Actions -->
+        <div class="nav-actions">
+          <button class="btn-search-trigger" id="btn-header-search" title="Quick Arsenal Search">
+            <span>Search</span>
+            <kbd class="search-kbd">Ctrl+K</kbd>
+          </button>
+          <a href="https://github.com/harsh-hak/ETC-Ethical-Coders" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            GitHub
+          </a>
+          <button class="btn-mobile-menu" id="btn-mobile-menu" aria-label="Toggle Navigation Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Slide-Out Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About Team</a></li>
+      <li><a href="#team" class="mobile-nav-link">Team Operatives</a></li>
+      <li><a href="#writeups" class="mobile-nav-link">CTF Writeups</a></li>
+      <li><a href="#arsenal" class="mobile-nav-link">Command Arsenal</a></li>
+      <li><a href="#platforms" class="mobile-nav-link">Platforms & Badges</a></li>
+      <li><a href="https://github.com/harsh-hak/ETC-Ethical-Coders" target="_blank" class="mobile-nav-link" style="color: var(--orange-400);">GitHub Repository ↗</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="app-container">
+        <div class="hero-logo-wrapper reveal">
+          <img src="assets/images/logo.png" alt="ETC Official Emblem" class="hero-logo-img">
+        </div>
+
+        <div class="glow-pill reveal reveal-delay-1">Competitive CTF & Offensive Research</div>
+
+        <h1 class="hero-headline reveal reveal-delay-2">
+          Pioneering <span class="gradient-text-orange">Ethical Exploitation</span> & Security Mastery
+        </h1>
+
+        <p class="hero-description reveal reveal-delay-3">
+          We are <strong>ETC (Ethical Coders)</strong> — a specialized collective of 6 cybersecurity operators competing in global CTFs, analyzing attack surfaces, and engineering robust defensive paradigms.
+        </p>
+
+        <div class="hero-cta-group reveal reveal-delay-4">
+          <a href="#writeups" class="btn-primary">Explore CTF Writeups</a>
+          <a href="#arsenal" class="btn-secondary">Command Arsenal</a>
+        </div>
+
+        <!-- Live Terminal Simulation -->
+        <div class="hero-terminal-card reveal reveal-delay-5">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <span class="terminal-title">etc_ctf_shell.sh — bash — 80x24</span>
+            <span></span>
+          </div>
+          <div class="terminal-body" id="terminal-live-body">
+            <!-- Dynamically populated by js/terminal.js -->
+          </div>
+        </div>
+
+        <!-- Stats Strip -->
+        <div class="stats-strip reveal reveal-delay-6">
+          <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Specialized Hackers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Flags Captured</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">CTF Platforms</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Ethical Research</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="app-container">
+        <div class="section-header reveal">
+          <div class="glow-pill section-badge">Our Mission</div>
+          <h2 class="section-title">Root Access Through Rigorous Method</h2>
+          <p class="section-subtitle">
+            From vulnerability discovery to privilege escalation, ETC dismantles complex CTF machines with surgical precision, automated tooling, and collaborative intelligence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Members Grid -->
+    <section class="section" id="team" style="background: rgba(8, 14, 28, 0.4);">
+      <div class="app-container">
+        <div class="section-header reveal">
+          <div class="glow-pill section-badge">Team Operatives</div>
+          <h2 class="section-title">Meet The ETC Hackers</h2>
+          <p class="section-subtitle">
+            Six disciplined specialists uniting binary analysis, web exploitation, cryptography, digital forensics, and OSINT.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1: Harsh Kanojia -->
+          <div class="member-card tilt-card reveal reveal-delay-1">
+            <div class="member-avatar-box">
+              <img src="assets/images/avatars/harsh.svg" alt="Harsh Kanojia" class="member-avatar-img">
+            </div>
+            <span class="member-role-badge">Team Lead & Strategist</span>
+            <h3 class="member-name">Harsh Kanojia</h3>
+            <span class="member-specialty">Full-Chain CTF Operator & Linux PrivEsc</span>
+            <p class="member-bio">
+              Orchestrates team offensive engagements, kernel exploit adaptation (CVE-2021-3156), automation scripts, and full-chain machine compromises.
+            </p>
+            <div class="member-tags">
+              <span class="skill-tag">#TeamLead</span>
+              <span class="skill-tag">#LinuxPrivEsc</span>
+              <span class="skill-tag">#Automation</span>
+            </div>
+          </div>
+
+          <!-- Member 2: Kevil -->
+          <div class="member-card tilt-card reveal reveal-delay-2">
+            <div class="member-avatar-box">
+              <img src="assets/images/avatars/kevil.svg" alt="Kevil" class="member-avatar-img">
+            </div>
+            <span class="member-role-badge">Binary Exploitation</span>
+            <h3 class="member-name">Kevil</h3>
+            <span class="member-specialty">Pwn & Memory Corruption</span>
+            <p class="member-bio">
+              Master of buffer overflows, heap exploitation, ROP gadgets, format string vulnerabilities, and reverse engineering ELF/PE binaries.
+            </p>
+            <div class="member-tags">
+              <span class="skill-tag">#Pwn</span>
+              <span class="skill-tag">#ROPChains</span>
+              <span class="skill-tag">#GDB/Pwntools</span>
+            </div>
+          </div>
+
+          <!-- Member 3: Shloka -->
+          <div class="member-card tilt-card reveal reveal-delay-3">
+            <div class="member-avatar-box">
+              <img src="assets/images/avatars/shloka.svg" alt="Shloka" class="member-avatar-img">
+            </div>
+            <span class="member-role-badge">Cryptography Lead</span>
+            <h3 class="member-name">Shloka</h3>
+            <span class="member-specialty">Mathematical Security & Cipher Analysis</span>
+            <p class="member-bio">
+              Breaks custom cryptographic primitives, RSA attacks (Wiener, Coppersmith), elliptic curve cryptography (ECC), and lattice-based schemes.
+            </p>
+            <div class="member-tags">
+              <span class="skill-tag">#Crypto</span>
+              <span class="skill-tag">#RSA</span>
+              <span class="skill-tag">#SageMath</span>
+            </div>
+          </div>
+
+          <!-- Member 4: Zalak -->
+          <div class="member-card tilt-card reveal reveal-delay-4">
+            <div class="member-avatar-box">
+              <img src="assets/images/avatars/zalak.svg" alt="Zalak" class="member-avatar-img">
+            </div>
+            <span class="member-role-badge">Forensics & Stego</span>
+            <h3 class="member-name">Zalak</h3>
+            <span class="member-specialty">Digital Forensics & File Carving</span>
+            <p class="member-bio">
+              Expert in memory forensics (Volatility), PCAP network traffic deep-inspection, file header magic byte repairs, and steganography extraction.
+            </p>
+            <div class="member-tags">
+              <span class="skill-tag">#Forensics</span>
+              <span class="skill-tag">#Stego</span>
+              <span class="skill-tag">#Volatility</span>
+            </div>
+          </div>
+
+          <!-- Member 5: Dhyey -->
+          <div class="member-card tilt-card reveal reveal-delay-5">
+            <div class="member-avatar-box">
+              <img src="assets/images/avatars/dhyey.svg" alt="Dhyey" class="member-avatar-img">
+            </div>
+            <span class="member-role-badge">Web Exploitation</span>
+            <h3 class="member-name">Dhyey</h3>
+            <span class="member-specialty">Web Security & API Vulnerabilities</span>
+            <p class="member-bio">
+              Specializes in command injection, SSRF, GraphQL abuse, OAuth flows, deserialization flaws, and bypassing modern web application firewalls.
+            </p>
+            <div class="member-tags">
+              <span class="skill-tag">#WebSecurity</span>
+              <span class="skill-tag">#CommandInjection</span>
+              <span class="skill-tag">#BurpSuite</span>
+            </div>
+          </div>
+
+          <!-- Member 6: Dhruvraj -->
+          <div class="member-card tilt-card reveal reveal-delay-6">
+            <div class="member-avatar-box">
+              <img src="assets/images/avatars/dhruvraj.svg" alt="Dhruvraj" class="member-avatar-img">
+            </div>
+            <span class="member-role-badge">OSINT & Recon</span>
+            <h3 class="member-name">Dhruvraj</h3>
+            <span class="member-specialty">Infrastructure Mapping & Threat Intel</span>
+            <p class="member-bio">
+              Conducts exhaustive external surface mapping, cloud infrastructure triage, sub-domain brute-forcing, and advanced geolocation OSINT.
+            </p>
+            <div class="member-tags">
+              <span class="skill-tag">#OSINT</span>
+              <span class="skill-tag">#Recon</span>
+              <span class="skill-tag">#InfraTriage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTF Writeups Section -->
+    <section class="section" id="writeups">
+      <div class="app-container">
+        <div class="section-header reveal">
+          <div class="glow-pill section-badge">Technical Walkthroughs</div>
+          <h2 class="section-title">CTF Writeups & Lab Reports</h2>
+          <p class="section-subtitle">
+            Explore complete exploitation chains, command breakdowns, and evidentiary screenshots directly in our interactive reader.
+          </p>
+        </div>
+
+        <div class="writeup-controls reveal">
+          <div class="filter-tabs">
+            <button class="filter-btn is-active" data-filter="all">All Writeups</button>
+            <button class="filter-btn" data-filter="tryhackme">TryHackMe</button>
+            <button class="filter-btn" data-filter="linux">Linux PrivEsc</button>
+            <button class="filter-btn" data-filter="web">Web Security</button>
+            <button class="filter-btn" data-filter="arsenal">Cheat Sheets</button>
+          </div>
+        </div>
+
+        <div class="writeups-grid" id="writeups-grid-container">
+          <!-- Populated by js/writeups.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Command Arsenal Section -->
+    <section class="section" id="arsenal" style="background: rgba(8, 14, 28, 0.4);">
+      <div class="app-container">
+        <div class="section-header reveal">
+          <div class="glow-pill section-badge">Interactive Tool</div>
+          <h2 class="section-title">CTF Command Arsenal</h2>
+          <p class="section-subtitle">
+            Instant search across 50+ battle-tested reconnaissance, reverse shell, cracking, and privilege escalation commands.
+          </p>
+        </div>
+
+        <div class="arsenal-container reveal">
+          <div class="arsenal-search-box">
+            <span style="color: var(--orange-400); font-weight: 700;">🔍</span>
+            <input type="text" id="arsenal-search-input" class="arsenal-search-input" placeholder="Search commands by tool, category (recon, privesc, shells, web), or syntax...">
+          </div>
+
+          <div class="arsenal-grid" id="arsenal-grid-container">
+            <!-- Populated by js/arsenal.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTF Platforms & Badges -->
+    <section class="section" id="platforms">
+      <div class="app-container">
+        <div class="section-header reveal">
+          <div class="glow-pill section-badge">Badges & Platforms</div>
+          <h2 class="section-title">Combat Arenas</h2>
+          <p class="section-subtitle">
+            Platforms where ETC sharpens skills, captures flags, and tests emerging attack strategies.
+          </p>
+        </div>
+
+        <div class="stats-strip reveal" style="max-width: 100%;">
+          <div class="stat-item">
+            <div class="stat-number" style="font-size: var(--text-xl);">TryHackMe</div>
+            <div class="stat-label">Full Machine Writeups</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" style="font-size: var(--text-xl);">HackTheBox</div>
+            <div class="stat-label">Pwn & Active Directory</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" style="font-size: var(--text-xl);">PicoCTF</div>
+            <div class="stat-label">Speed & Precision</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" style="font-size: var(--text-xl);">CTFtime</div>
+            <div class="stat-label">Global Tournaments</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Writeup Modal Dialog -->
+  <div class="modal-overlay" id="writeup-modal" role="dialog" aria-modal="true">
+    <div class="modal-content-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title-text">Writeup Reader</h3>
+        <button class="btn-close-modal" id="btn-close-modal" aria-label="Close Modal">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast-notification" id="toast-notification">
+    Command copied to clipboard!
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="app-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="ETC Logo" class="footer-logo">
+          <div>
+            <h4 style="font-size: var(--text-base); color: var(--text-pure);">ETC (Ethical Coders)</h4>
+            <span style="font-size: 11px; color: var(--orange-400);">Harsh • Kevil • Shloka • Zalak • Dhyey • Dhruvraj</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/harsh-hak/ETC-Ethical-Coders" target="_blank" rel="noopener noreferrer" style="font-weight: 700;">
+            GitHub: harsh-hak/ETC-Ethical-Coders ↗
+          </a>
+        </div>
+      </div>
+      <div style="text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 20px;">
+        <p class="footer-copy">
+          © 2026 ETC (Ethical Coders). All rights reserved. For educational and authorized security research only.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript App -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
