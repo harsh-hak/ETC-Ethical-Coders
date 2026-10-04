@@ -1,22 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
   <defs>
     <linearGradient id="grad-dhruvraj" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF5E1E" />
-      <stop offset="100%" stop-color="#FFA05C" />
+      <stop offset="0%" stop-color="#D9E1F1" />
+      <stop offset="100%" stop-color="#8FB3E2" />
     </linearGradient>
-    <radialGradient id="glow-dhruvraj" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF5E1E" stop-opacity="0.35" />
-      <stop offset="100%" stop-color="#0B1426" stop-opacity="0" />
-    </radialGradient>
   </defs>
-  <circle cx="100" cy="100" r="90" fill="#08101E" stroke="#1E2C4A" stroke-width="2" />
-  <circle cx="100" cy="100" r="80" fill="url(#glow-dhruvraj)" />
-  <circle cx="100" cy="100" r="45" stroke="#1E335C" stroke-width="1.5" stroke-dasharray="4 4" />
+  <rect width="200" height="200" fill="#192338" rx="12" />
+  <rect x="10" y="10" width="180" height="180" stroke="#31487A" stroke-width="2" fill="#1E2E4F" rx="8" />
+  <circle cx="100" cy="100" r="45" stroke="#31487A" stroke-width="1.5" stroke-dasharray="4 4" />
   <circle cx="100" cy="100" r="30" stroke="url(#grad-dhruvraj)" stroke-width="2" />
-  <circle cx="100" cy="100" r="15" stroke="#FF7A00" stroke-width="1.5" />
-  <circle cx="100" cy="100" r="4" fill="#FF5E1E" />
-  <line x1="100" y1="100" x2="140" y2="70" stroke="url(#grad-dhruvraj)" stroke-width="3" stroke-linecap="round" />
-  <circle cx="138" cy="72" r="4" fill="#FFA05C" />
-  <circle cx="75" cy="120" r="3" fill="#FF7A00" />
-  <circle cx="65" cy="75" r="2.5" fill="#FF5E1E" />
+  <circle cx="100" cy="100" r="15" stroke="#8FB3E2" stroke-width="1.5" />
+  <circle cx="100" cy="100" r="4" fill="#D9E1F1" />
+  <line x1="100" y1="100" x2="140" y2="70" stroke="url(#grad-dhruvraj)" stroke-width="3" />
+  <circle cx="138" cy="72" r="4" fill="#8FB3E2" />
 </svg>

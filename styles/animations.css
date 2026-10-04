@@ -1,106 +1,102 @@
 /* ==========================================================================
-   ETC (Ethical Coders) - Keyframes, Glows & Fluid Animations
+   ETC (Ethical Coders) - Gradient Animations & Minimal Brutalism Transitions
    ========================================================================== */
 
-/* Background Canvas */
-#particles-canvas {
+/* Shifting Gradient Background Layer */
+.ambient-gradient-mesh {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none;
   z-index: 0;
-  opacity: 0.65;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(143, 179, 226, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(49, 72, 122, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(30, 46, 79, 0.5) 0%, rgba(25, 35, 56, 1) 100%);
+  background-size: 200% 200%;
+  animation: gradientMeshFlow 20s ease infinite alternate;
 }
 
-/* Cyber Ambient Gradients */
-.ambient-glow {
+@keyframes gradientMeshFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Animated Gradient Text */
+.gradient-text-animated {
+  background: linear-gradient(135deg, #D9E1F1 0%, #8FB3E2 40%, #31487A 75%, #8FB3E2 100%);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradientFlow 8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textGradientFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
+}
+
+/* Shimmering Gradient Border */
+.gradient-border-animated {
+  position: relative;
+  background: var(--bg-surface);
+}
+
+.gradient-border-animated::before {
+  content: '';
   position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 0;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: var(--grad-animated-border);
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: borderFlow 10s ease infinite;
+  border-radius: inherit;
 }
 
-.ambient-glow-orange {
-  width: 380px;
-  height: 380px;
-  background: radial-gradient(circle, rgba(255, 94, 30, 0.22) 0%, rgba(255, 122, 0, 0.05) 50%, transparent 70%);
-  animation: floatPulse 9s ease-in-out infinite alternate;
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.ambient-glow-navy {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(28, 48, 88, 0.35) 0%, rgba(13, 22, 43, 0) 70%);
-  animation: floatPulse 12s ease-in-out infinite alternate-reverse;
+/* Monospace Terminal Cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 16px;
+  background-color: var(--c-jordy);
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: cursorBlink 1s step-start infinite;
 }
 
-/* Keyframes */
-@keyframes floatPulse {
-  0% {
-    transform: translate(0, 0) scale(0.95);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translate(25px, -15px) scale(1.08);
-    opacity: 0.9;
-  }
-  100% {
-    transform: translate(-20px, 20px) scale(1);
-    opacity: 0.7;
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(255, 94, 30, 0.3), 0 0 30px rgba(255, 94, 30, 0.15);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(255, 94, 30, 0.55), 0 0 60px rgba(255, 122, 0, 0.25);
-  }
-}
-
-@keyframes logoBreathing {
-  0%, 100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 20px rgba(255, 94, 30, 0.4));
-  }
-  50% {
-    transform: scale(1.03);
-    filter: drop-shadow(0 0 35px rgba(255, 122, 0, 0.65));
-  }
-}
-
-@keyframes scanline {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(1000%);
-  }
-}
-
-@keyframes badgeShimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-@keyframes blinkCursor {
+@keyframes cursorBlink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
-/* Reveal On Scroll Classes */
+/* Smooth Minimal Scroll Reveals */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -109,69 +105,9 @@
   transform: translateY(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }
-.reveal-delay-6 { transition-delay: 0.6s; }
-
-/* 3D Tilt Card Base */
-.tilt-card {
-  transform-style: preserve-3d;
-  transition: transform var(--trans-normal), box-shadow var(--trans-normal), border-color var(--trans-normal);
-  will-change: transform;
-}
-
-.tilt-card:hover {
-  box-shadow: var(--shadow-card-hover);
-  border-color: var(--border-hover);
-}
-
-/* Terminal Cursor */
-.terminal-cursor {
-  display: inline-block;
-  width: 8px;
-  height: 18px;
-  background-color: var(--orange-400);
-  vertical-align: middle;
-  margin-left: 4px;
-  animation: blinkCursor 1s step-start infinite;
-  box-shadow: 0 0 8px var(--orange-400);
-}
-
-/* Gradient Text */
-.gradient-text-orange {
-  background: var(--grad-sunset);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-/* Glowing Border Pill */
-.glow-pill {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 94, 30, 0.08);
-  border: 1px solid rgba(255, 94, 30, 0.3);
-  color: var(--orange-300);
-  font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  backdrop-filter: blur(8px);
-}
-
-.glow-pill::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--orange-400);
-  margin-right: 8px;
-  box-shadow: 0 0 8px var(--orange-400);
-}
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+.reveal-delay-5 { transition-delay: 0.40s; }
+.reveal-delay-6 { transition-delay: 0.48s; }

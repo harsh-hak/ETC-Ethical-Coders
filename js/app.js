@@ -1,15 +1,13 @@
 /**
- * ETC (Ethical Coders) - Main Application Controller
+ * ETC (Ethical Coders) - Minimal Brutalism App Controller
  */
 
-import { initParticles } from './particles.js';
 import { initTerminal } from './terminal.js';
 import { initWriteups } from './writeups.js';
 import { initArsenal } from './arsenal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Submodules
-  initParticles();
+  // 1. Initialize Submodules (Particles removed as requested)
   initTerminal();
   initWriteups();
   initArsenal();
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Scroll Reveal Animations (IntersectionObserver)
+  // 3. Minimal Scroll Reveal Transitions
   const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -45,34 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px'
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // 4. Dynamic 3D Card Tilt Effect
-  const tiltCards = document.querySelectorAll('.tilt-card');
-  tiltCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = ((y - centerY) / centerY) * -6;
-      const rotateY = ((x - centerX) / centerX) * 6;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
-    });
-  });
-
-  // 5. Global Command Search Shortcut (Ctrl+K or Cmd+K)
+  // 4. Global Command Search Shortcut (Ctrl+K or Cmd+K)
   const searchInput = document.getElementById('arsenal-search-input');
   window.addEventListener('keydown', (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
