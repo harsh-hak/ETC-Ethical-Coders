@@ -530,6 +530,38 @@ button {
   padding: 2px 8px;
 }
 
+.member-links {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--c-ice-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.member-portfolio-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--c-navy-dark);
+  background: var(--c-ice-tag);
+  border: 1px solid var(--border-dark);
+  padding: 5px 10px;
+  box-shadow: var(--shadow-brutal-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.member-portfolio-link:hover {
+  background: var(--c-navy-dark);
+  color: var(--c-white);
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-brutal-md);
+}
+
 /* ==========================================================================
    Writeups Catalog
    ========================================================================== */

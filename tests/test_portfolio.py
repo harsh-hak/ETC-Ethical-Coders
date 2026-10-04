@@ -43,10 +43,19 @@ def test_all_devices():
         assert "MEMBERS" in nav_text
         assert "[01]" not in nav_text
         
-        # Check 6 team members
+        # Check 6 team members & Harsh Portfolio Link
         member_cards = page_desk.locator('.member-card')
         assert member_cards.count() == 6, f"Expected 6 members, got {member_cards.count()}"
-        print(f"Verified {member_cards.count()} team members!")
+        harsh_link = page_desk.locator('.member-portfolio-link').first.get_attribute('href')
+        print(f"Harsh Kanojia Portfolio Link: {harsh_link}")
+        assert "harsh-hak.github.io" in harsh_link
+        
+        # Check WhatsApp Join Us CTA
+        join_btn = page_desk.locator('a:has-text("JOIN US")')
+        join_href = join_btn.get_attribute('href')
+        print(f"Join Us Link: {join_href}")
+        assert "wa.me/918700158124" in join_href
+        print("Verified WhatsApp Join Us and Portfolio links!")
         
         # Check Writeup Cards & GitHub Redirection Links
         writeup_cards = page_desk.locator('.writeup-card')
