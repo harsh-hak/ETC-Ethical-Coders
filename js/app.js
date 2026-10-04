@@ -2,13 +2,11 @@
  * ETC (Ethical Coders) - Minimal Brutalism App Controller
  */
 
-import { initTerminal } from './terminal.js';
 import { initWriteups } from './writeups.js';
 import { initArsenal } from './arsenal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Submodules (Particles removed as requested)
-  initTerminal();
+  // 1. Initialize Submodules
   initWriteups();
   initArsenal();
 
@@ -43,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -30px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -20px 0px'
   });
 
   revealElements.forEach(el => revealObserver.observe(el));

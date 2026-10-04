@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ETC (Ethical Coders) - Minimal Brutalist CTF Team & Security Research Portfolio.">
   <meta name="theme-color" content="#192338">
-  <title>ETC (Ethical Coders) — Minimal Brutalist CTF Portfolio</title>
+  <title>ETC (Ethical Coders) — CTF & Security Research Team</title>
 
-  <!-- Google Fonts: Playfair Display, Josefin Sans, JetBrains Mono -->
+  <!-- Google Fonts: Inter & Space Grotesk (Armstrong Typography Stack) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-  <!-- Shifting Ambient Gradient Mesh Background (No Moving Particles) -->
+  <!-- Shifting Ambient Gradient Mesh Background -->
   <div class="ambient-gradient-mesh"></div>
 
   <!-- Header Navigation -->
@@ -32,13 +32,12 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
+        <!-- Desktop Navigation Links (Clean - No Numbers) -->
         <ul class="nav-links">
-          <li><a href="#about" class="nav-link">[01] ABOUT</a></li>
-          <li><a href="#team" class="nav-link">[02] OPERATIVES</a></li>
-          <li><a href="#writeups" class="nav-link">[03] WRITEUPS</a></li>
-          <li><a href="#arsenal" class="nav-link">[04] ARSENAL</a></li>
-          <li><a href="#platforms" class="nav-link">[05] ARENAS</a></li>
+          <li><a href="#about" class="nav-link">ABOUT</a></li>
+          <li><a href="#team" class="nav-link">OPERATIVES</a></li>
+          <li><a href="#writeups" class="nav-link">WRITEUPS</a></li>
+          <li><a href="#arsenal" class="nav-link">ARSENAL</a></li>
         </ul>
 
         <!-- Navigation Actions -->
@@ -63,12 +62,11 @@
   <!-- Mobile Navigation Slide-Out Drawer -->
   <div class="mobile-nav-drawer" id="mobile-nav-drawer">
     <ul class="mobile-nav-links" style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
-      <li><a href="#hero" class="mobile-nav-link">[00] HOME</a></li>
-      <li><a href="#about" class="mobile-nav-link">[01] ABOUT TEAM</a></li>
-      <li><a href="#team" class="mobile-nav-link">[02] OPERATIVES</a></li>
-      <li><a href="#writeups" class="mobile-nav-link">[03] CTF WRITEUPS</a></li>
-      <li><a href="#arsenal" class="mobile-nav-link">[04] COMMAND ARSENAL</a></li>
-      <li><a href="#platforms" class="mobile-nav-link">[05] COMBAT ARENAS</a></li>
+      <li><a href="#hero" class="mobile-nav-link">HOME</a></li>
+      <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
+      <li><a href="#team" class="mobile-nav-link">OPERATIVES</a></li>
+      <li><a href="#writeups" class="mobile-nav-link">WRITEUPS</a></li>
+      <li><a href="#arsenal" class="mobile-nav-link">COMMAND ARSENAL</a></li>
       <li><a href="https://github.com/harsh-hak/ETC-Ethical-Coders" target="_blank" class="mobile-nav-link" style="color: var(--c-jordy);">GITHUB REPO ↗</a></li>
     </ul>
   </div>
@@ -95,22 +93,11 @@
 
         <div class="hero-cta-group reveal reveal-delay-4">
           <a href="#writeups" class="btn-primary">EXPLORE WRITEUPS</a>
-          <a href="#arsenal" class="btn-secondary">COMMAND ARSENAL</a>
-        </div>
-
-        <!-- Live Monospace Terminal Box -->
-        <div class="hero-terminal-card reveal reveal-delay-5">
-          <div class="terminal-header">
-            <span class="terminal-title">TERMINAL // etc_ctf_shell.sh [ONLINE]</span>
-            <span class="brutalist-tag" style="padding: 1px 6px; font-size: 9px;">AUTH: ROOT</span>
-          </div>
-          <div class="terminal-body" id="terminal-live-body">
-            <!-- Populated dynamically by js/terminal.js -->
-          </div>
+          <a href="#about" class="btn-secondary">JOIN US</a>
         </div>
 
         <!-- Modular Brutalist Stats Grid -->
-        <div class="stats-strip reveal reveal-delay-6">
+        <div class="stats-strip reveal reveal-delay-5">
           <div class="stat-item">
             <div class="stat-number">06</div>
             <div class="stat-label">OPERATIVES</div>
@@ -135,7 +122,7 @@
     <section class="section" id="about">
       <div class="app-container">
         <div class="section-header reveal">
-          <span class="brutalist-tag">[01] // PHILOSOPHY</span>
+          <span class="brutalist-tag">// PHILOSOPHY</span>
           <h2 class="section-title">Architectural Precision Over Brute Force</h2>
           <p>
             ETC operates with disciplined methodology: full reconnaissance, hypothesis-driven vulnerability verification, clean privilege escalation, and reproducible documentation.
@@ -148,7 +135,7 @@
     <section class="section" id="team" style="background: rgba(30, 46, 79, 0.2);">
       <div class="app-container">
         <div class="section-header reveal">
-          <span class="brutalist-tag">[02] // DOSSIERS</span>
+          <span class="brutalist-tag">// DOSSIERS</span>
           <h2 class="section-title">Team Operatives</h2>
           <p>The six specialized hackers comprising the ETC Ethical Coders roster.</p>
         </div>
@@ -287,7 +274,7 @@
     <section class="section" id="writeups">
       <div class="app-container">
         <div class="section-header reveal">
-          <span class="brutalist-tag">[03] // REPORTS</span>
+          <span class="brutalist-tag">// REPORTS</span>
           <h2 class="section-title">CTF Writeups & Playbooks</h2>
           <p>Click any document card to read full technical walkthroughs with embedded screenshots.</p>
         </div>
@@ -312,7 +299,7 @@
     <section class="section" id="arsenal" style="background: rgba(30, 46, 79, 0.2);">
       <div class="app-container">
         <div class="section-header reveal">
-          <span class="brutalist-tag">[04] // ARSENAL</span>
+          <span class="brutalist-tag">// ARSENAL</span>
           <h2 class="section-title">Command Arsenal Search</h2>
           <p>Instant query tool across 50+ pentesting commands with 1-click clipboard copy.</p>
         </div>
@@ -325,36 +312,6 @@
 
           <div class="arsenal-grid" id="arsenal-grid-container">
             <!-- Populated by js/arsenal.js -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Combat Arenas -->
-    <section class="section" id="platforms">
-      <div class="app-container">
-        <div class="section-header reveal">
-          <span class="brutalist-tag">[05] // ARENAS</span>
-          <h2 class="section-title">Active Combat Platforms</h2>
-          <p>Competitive labs and platforms audited by the team.</p>
-        </div>
-
-        <div class="stats-strip reveal" style="max-width: 100%;">
-          <div class="stat-item">
-            <div class="stat-number" style="font-size: var(--text-lg); font-family: var(--font-serif);">TryHackMe</div>
-            <div class="stat-label">Full Walkthroughs</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" style="font-size: var(--text-lg); font-family: var(--font-serif);">HackTheBox</div>
-            <div class="stat-label">Pwn & Active Directory</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" style="font-size: var(--text-lg); font-family: var(--font-serif);">PicoCTF</div>
-            <div class="stat-label">Binary Speed Runs</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" style="font-size: var(--text-lg); font-family: var(--font-serif);">CTFtime</div>
-            <div class="stat-label">Global Ranked Events</div>
           </div>
         </div>
       </div>
@@ -387,7 +344,6 @@
           <img src="assets/images/logo.svg" alt="ETC Logo" style="width: 32px; height: 32px; border: 1px solid var(--c-jordy);">
           <div>
             <h4 style="font-size: var(--text-sm); color: var(--text-pure); font-family: var(--font-mono);">ETC // ETHICAL CODERS</h4>
-            <span style="font-family: var(--font-mono); font-size: 10px; color: var(--c-jordy);">HARSH • KEVIL • SHLOKA • ZALAK • DHYEY • DHRUVRAJ</span>
           </div>
         </div>
         <div>
@@ -398,7 +354,7 @@
       </div>
       <div style="border-top: 1px solid var(--c-yinmn); padding-top: 16px;">
         <p class="footer-copy">
-          © 2026 ETC (ETHICAL CODERS). MINIMAL BRUTALISM CTF PORTFOLIO. FOR EDUCATIONAL AND AUTHORIZED RESEARCH ONLY.
+          © 2026 ETC (ETHICAL CODERS). ALL RIGHTS RESERVED.
         </p>
       </div>
     </div>
