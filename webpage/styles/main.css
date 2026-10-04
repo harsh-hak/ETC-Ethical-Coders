@@ -107,6 +107,19 @@ button {
   backdrop-filter: blur(10px);
 }
 
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #0B192C, #1E40AF, #38BDF8, #1E40AF, #0B192C);
+  background-size: 200% 100%;
+  animation: gradientBarFlow 4s linear infinite;
+  z-index: 101;
+}
+
 .nav-inner {
   display: flex;
   align-items: center;
@@ -422,12 +435,31 @@ button {
   padding: 24px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #0B192C, #1E40AF, #38BDF8, #1E40AF, #0B192C);
+  background-size: 200% 100%;
+  animation: gradientBarFlow 3s linear infinite;
+  transition: left 0.3s ease;
 }
 
 .member-card:hover {
   transform: translate(-3px, -3px);
   box-shadow: var(--shadow-brutal-hover);
+}
+
+.member-card:hover::before {
+  left: 0;
 }
 
 .member-card-top {
@@ -514,13 +546,32 @@ button {
   padding: 22px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.writeup-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #0B192C, #1E40AF, #38BDF8, #1E40AF, #0B192C);
+  background-size: 200% 100%;
+  animation: gradientBarFlow 3s linear infinite;
+  transition: left 0.3s ease;
 }
 
 .writeup-card:hover {
   transform: translate(-3px, -3px);
   box-shadow: var(--shadow-brutal-hover);
+}
+
+.writeup-card:hover::before {
+  left: 0;
 }
 
 .writeup-card-header {
