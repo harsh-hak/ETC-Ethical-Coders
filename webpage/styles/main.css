@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ETC (Ethical Coders) - Minimal Brutalism Main Stylesheet
+   ETC (Ethical Coders) - White & Navy Blue Minimal Brutalism Stylesheet
    Typography: Armstrong & Neutral Sans (Inter)
    ========================================================================== */
 
@@ -16,13 +16,14 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  background-color: var(--c-oxford);
+  background-color: var(--c-bg);
   color: var(--text-primary);
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--c-oxford);
+  background-color: var(--c-bg);
+  color: var(--text-primary);
   min-height: 100vh;
   line-height: 1.6;
   overflow-x: hidden;
@@ -45,13 +46,13 @@ p {
 }
 
 a {
-  color: var(--c-jordy);
+  color: var(--c-navy-accent);
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 a:hover {
-  color: var(--c-lavender);
+  color: var(--c-navy-dark);
 }
 
 button {
@@ -75,20 +76,20 @@ button {
 .brutalist-tag {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--c-jordy);
-  background: rgba(49, 72, 122, 0.35);
-  border: 1px solid var(--c-yinmn);
-  padding: 3px 8px;
+  font-weight: 700;
+  color: var(--c-navy-dark);
+  background: var(--c-ice-tag);
+  border: 1px solid var(--c-navy-primary);
+  padding: 3px 10px;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .brutalist-tag-light {
-  color: var(--c-oxford);
-  background: var(--c-jordy);
-  border: 1px solid var(--c-lavender);
+  color: var(--c-white);
+  background: var(--c-navy-dark);
+  border: 1px solid var(--c-navy-dark);
   font-weight: 700;
 }
 
@@ -101,8 +102,8 @@ button {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(25, 35, 56, 0.95);
-  border-bottom: 1px solid var(--c-yinmn);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid var(--border-dark);
   backdrop-filter: blur(10px);
 }
 
@@ -121,10 +122,10 @@ button {
 }
 
 .brand-logo-img {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-sharp);
-  border: 1px solid var(--c-jordy);
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-dark);
+  background: var(--c-white);
   object-fit: cover;
 }
 
@@ -136,15 +137,16 @@ button {
 .brand-title {
   font-family: var(--font-display);
   font-size: var(--text-lg);
-  font-weight: 700;
-  color: var(--text-pure);
+  font-weight: 800;
+  color: var(--c-navy-dark);
   letter-spacing: 0.04em;
 }
 
 .brand-tagline {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: var(--c-jordy);
+  font-weight: 700;
+  color: var(--c-navy-primary);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -159,17 +161,18 @@ button {
 .nav-link {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--text-secondary);
-  padding: 6px 10px;
+  font-weight: 700;
+  color: var(--c-navy-primary);
+  padding: 6px 12px;
   border: 1px solid transparent;
   transition: all 0.15s ease;
   letter-spacing: 0.04em;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--c-lavender);
-  border-color: var(--c-yinmn);
-  background: rgba(49, 72, 122, 0.25);
+  color: var(--c-white);
+  background: var(--c-navy-dark);
+  border-color: var(--c-navy-dark);
 }
 
 .nav-actions {
@@ -182,44 +185,47 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px;
-  background: var(--c-jordy);
-  color: var(--c-oxford);
-  border: 1px solid var(--c-lavender);
+  padding: 10px 20px;
+  background: var(--c-navy-dark);
+  color: var(--c-white);
+  border: 2px solid var(--c-navy-dark);
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  box-shadow: var(--shadow-brutal-sm);
   transition: all 0.15s ease;
 }
 
 .btn-primary:hover {
-  background: var(--c-lavender);
-  color: var(--c-oxford);
-  box-shadow: 0 0 15px rgba(143, 179, 226, 0.4);
+  background: var(--c-navy-primary);
+  color: var(--c-white);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-brutal-md);
 }
 
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px;
-  background: transparent;
-  border: 1px solid var(--c-yinmn);
-  color: var(--c-lavender);
+  padding: 10px 20px;
+  background: var(--c-white);
+  border: 2px solid var(--c-navy-dark);
+  color: var(--c-navy-dark);
   font-family: var(--font-mono);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  box-shadow: var(--shadow-brutal-sm);
   transition: all 0.15s ease;
 }
 
 .btn-secondary:hover {
-  border-color: var(--c-jordy);
-  background: rgba(49, 72, 122, 0.3);
-  color: var(--text-pure);
+  background: var(--c-bg-subtle);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-brutal-md);
 }
 
 /* Mobile Toggle */
@@ -229,16 +235,17 @@ button {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
-  background: var(--c-space-cadet);
-  border: 1px solid var(--c-yinmn);
+  width: 42px;
+  height: 42px;
+  background: var(--c-white);
+  border: 2px solid var(--c-navy-dark);
+  box-shadow: var(--shadow-brutal-sm);
 }
 
 .hamburger-line {
   width: 20px;
   height: 2px;
-  background-color: var(--c-lavender);
+  background-color: var(--c-navy-dark);
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -258,8 +265,8 @@ button {
   left: 0;
   width: 100%;
   height: calc(100vh - var(--header-height));
-  background: var(--c-oxford);
-  border-bottom: 2px solid var(--c-yinmn);
+  background: var(--c-white);
+  border-bottom: 2px solid var(--c-navy-dark);
   z-index: 99;
   padding: 24px var(--container-pad);
   display: flex;
@@ -276,16 +283,18 @@ button {
 .mobile-nav-link {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  color: var(--c-lavender);
+  font-weight: 700;
+  color: var(--c-navy-dark);
   padding: 14px 16px;
-  border: 1px solid var(--c-yinmn);
-  background: var(--c-space-cadet);
+  border: 2px solid var(--c-navy-dark);
+  background: var(--c-bg-subtle);
+  box-shadow: var(--shadow-brutal-sm);
   display: block;
 }
 
 .mobile-nav-link:hover {
-  background: var(--c-yinmn);
-  border-color: var(--c-jordy);
+  background: var(--c-navy-dark);
+  color: var(--c-white);
 }
 
 /* ==========================================================================
@@ -295,14 +304,16 @@ button {
   padding: clamp(50px, 8vw, 95px) 0 clamp(40px, 6vw, 75px);
   text-align: center;
   position: relative;
+  background: var(--c-bg);
 }
 
 .hero-logo-box {
   display: inline-block;
   margin-bottom: 20px;
   padding: 8px;
-  border: 1px solid var(--c-yinmn);
-  background: var(--c-space-cadet);
+  border: 2px solid var(--border-dark);
+  background: var(--c-white);
+  box-shadow: var(--shadow-brutal-sm);
 }
 
 .hero-logo-img {
@@ -316,12 +327,13 @@ button {
   font-weight: 800;
   max-width: 920px;
   margin: 16px auto 18px;
+  color: var(--c-navy-dark);
   letter-spacing: -0.02em;
 }
 
 .hero-description {
   font-size: var(--text-base);
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto 32px;
   color: var(--text-secondary);
 }
@@ -339,25 +351,26 @@ button {
 .stats-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--c-yinmn);
-  border: 1px solid var(--c-yinmn);
+  gap: 2px;
+  background: var(--border-dark);
+  border: 2px solid var(--border-dark);
   width: 100%;
   max-width: 960px;
   margin: 20px auto 0;
+  box-shadow: var(--shadow-brutal-md);
 }
 
 .stat-item {
-  padding: 18px 12px;
-  background: var(--c-space-cadet);
+  padding: 20px 14px;
+  background: var(--c-white);
   text-align: center;
 }
 
 .stat-number {
   font-family: var(--font-mono);
   font-size: var(--text-2xl);
-  font-weight: 700;
-  color: var(--c-jordy);
+  font-weight: 800;
+  color: var(--c-navy-dark);
   line-height: 1.1;
   margin-bottom: 4px;
 }
@@ -365,6 +378,7 @@ button {
 .stat-label {
   font-family: var(--font-mono);
   font-size: 11px;
+  font-weight: 700;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -376,7 +390,7 @@ button {
 .section {
   padding: clamp(50px, 7vw, 80px) 0;
   position: relative;
-  border-top: 1px solid var(--c-yinmn);
+  border-top: 2px solid var(--border-dark);
 }
 
 .section-header {
@@ -388,30 +402,32 @@ button {
 .section-title {
   font-size: var(--text-3xl);
   font-weight: 800;
+  color: var(--c-navy-dark);
   margin: 8px 0 10px;
 }
 
 /* ==========================================================================
-   Operatives Dossier Grid (6 Members)
+   Team Members Grid (6 Members)
    ========================================================================== */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .member-card {
-  background: var(--c-space-cadet);
-  border: 1px solid var(--c-yinmn);
+  background: var(--c-white);
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-brutal-md);
   padding: 24px;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .member-card:hover {
-  border-color: var(--c-jordy);
-  background: #23355A;
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-brutal-hover);
 }
 
 .member-card-top {
@@ -422,9 +438,10 @@ button {
 }
 
 .member-avatar-box {
-  width: 52px;
-  height: 52px;
-  border: 1px solid var(--c-yinmn);
+  width: 54px;
+  height: 54px;
+  border: 2px solid var(--border-dark);
+  background: var(--c-bg-subtle);
 }
 
 .member-avatar-img {
@@ -437,21 +454,23 @@ button {
 .member-id-tag {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--c-jordy);
+  font-weight: 700;
+  color: var(--c-navy-primary);
 }
 
 .member-name {
   font-family: var(--font-display);
   font-size: var(--text-xl);
-  font-weight: 700;
-  color: var(--text-pure);
+  font-weight: 800;
+  color: var(--c-navy-dark);
   margin-bottom: 4px;
 }
 
 .member-specialty {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--c-jordy);
+  font-weight: 700;
+  color: var(--c-navy-accent);
   margin-bottom: 10px;
 }
 
@@ -472,61 +491,36 @@ button {
 .skill-tag {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: var(--c-lavender);
-  background: rgba(25, 35, 56, 0.6);
-  border: 1px solid var(--c-yinmn);
-  padding: 2px 6px;
+  font-weight: 600;
+  color: var(--c-navy-dark);
+  background: var(--c-ice-tag);
+  border: 1px solid var(--c-ice-border);
+  padding: 2px 8px;
 }
 
 /* ==========================================================================
    Writeups Catalog
    ========================================================================== */
-.writeup-controls {
-  margin-bottom: 24px;
-}
-
-.filter-tabs {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  padding: 6px 14px;
-  background: var(--c-space-cadet);
-  border: 1px solid var(--c-yinmn);
-  color: var(--text-secondary);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  transition: all 0.15s ease;
-}
-
-.filter-btn:hover, .filter-btn.is-active {
-  background: var(--c-jordy);
-  border-color: var(--c-lavender);
-  color: var(--c-oxford);
-  font-weight: 700;
-}
-
 .writeups-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .writeup-card {
-  background: var(--c-space-cadet);
-  border: 1px solid var(--c-yinmn);
-  padding: 20px;
+  background: var(--c-white);
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-brutal-md);
+  padding: 22px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .writeup-card:hover {
-  border-color: var(--c-jordy);
-  background: #23355A;
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-brutal-hover);
 }
 
 .writeup-card-header {
@@ -539,21 +533,23 @@ button {
 .writeup-platform {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: var(--c-jordy);
+  font-weight: 700;
+  color: var(--c-navy-accent);
   text-transform: uppercase;
 }
 
 .writeup-date {
   font-family: var(--font-mono);
   font-size: 10px;
+  font-weight: 600;
   color: var(--text-muted);
 }
 
 .writeup-title {
   font-family: var(--font-display);
   font-size: var(--text-lg);
-  font-weight: 700;
-  color: var(--text-pure);
+  font-weight: 800;
+  color: var(--c-navy-dark);
   margin-bottom: 8px;
 }
 
@@ -569,15 +565,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--c-yinmn);
+  border-top: 1px solid var(--c-ice-border);
   padding-top: 12px;
 }
 
 .writeup-read-action {
   font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 700;
-  color: var(--c-jordy);
+  font-weight: 800;
+  color: var(--c-navy-accent);
 }
 
 /* ==========================================================================
@@ -589,8 +585,8 @@ button {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(19, 27, 44, 0.9);
-  backdrop-filter: blur(8px);
+  background: rgba(11, 25, 44, 0.7);
+  backdrop-filter: blur(6px);
   z-index: 200;
   display: none;
   align-items: center;
@@ -606,9 +602,9 @@ button {
   width: 100%;
   max-width: 880px;
   max-height: 88vh;
-  background: var(--c-space-cadet);
-  border: 1px solid var(--c-jordy);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  background: var(--c-white);
+  border: 2px solid var(--c-navy-dark);
+  box-shadow: 8px 8px 0px var(--c-navy-dark);
   display: flex;
   flex-direction: column;
 }
@@ -617,32 +613,36 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 20px;
-  background: #151F33;
-  border-bottom: 1px solid var(--c-yinmn);
+  padding: 16px 20px;
+  background: var(--c-navy-dark);
+  color: var(--c-white);
+  border-bottom: 2px solid var(--c-navy-dark);
 }
 
 .modal-title {
   font-family: var(--font-display);
   font-size: var(--text-lg);
-  color: var(--text-pure);
+  color: var(--c-white);
+  font-weight: 800;
 }
 
 .btn-close-modal {
-  width: 30px;
-  height: 30px;
-  background: var(--c-yinmn);
-  color: var(--c-lavender);
+  width: 32px;
+  height: 32px;
+  background: var(--c-white);
+  color: var(--c-navy-dark);
   font-family: var(--font-mono);
-  font-weight: 700;
+  font-weight: 800;
+  border: 2px solid var(--c-white);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.15s ease;
 }
 
 .btn-close-modal:hover {
-  background: var(--c-jordy);
-  color: var(--c-oxford);
+  background: var(--c-bg-subtle);
+  transform: scale(1.05);
 }
 
 .modal-body {
@@ -651,29 +651,54 @@ button {
   font-size: var(--text-sm);
   color: var(--text-primary);
   line-height: 1.7;
+  background: var(--c-white);
+}
+
+.modal-body h1, .modal-body h2, .modal-body h3 {
+  color: var(--c-navy-dark);
+  margin-top: 18px;
+  margin-bottom: 8px;
 }
 
 .modal-body pre {
-  background: #0E1524;
-  border: 1px solid var(--c-yinmn);
-  padding: 12px 14px;
+  background: var(--c-navy-dark);
+  color: #FFFFFF;
+  border: 1px solid var(--c-navy-dark);
+  padding: 14px 16px;
   font-family: var(--font-mono);
-  font-size: 11px;
-  margin: 14px 0;
+  font-size: 12px;
+  margin: 16px 0;
   overflow-x: auto;
+}
+
+.modal-body code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--c-ice-tag);
+  color: var(--c-navy-dark);
+  padding: 2px 4px;
+  border: 1px solid var(--c-ice-border);
+}
+
+.modal-body pre code {
+  background: transparent;
+  color: #FFFFFF;
+  border: none;
+  padding: 0;
 }
 
 .modal-body img {
   max-width: 100%;
-  border: 1px solid var(--c-yinmn);
+  border: 2px solid var(--c-navy-dark);
   margin: 14px 0;
+  box-shadow: var(--shadow-brutal-sm);
 }
 
 /* Footer */
 .site-footer {
-  padding: 32px 0 24px;
-  border-top: 1px solid var(--c-yinmn);
-  background: #121A2B;
+  padding: 36px 0 28px;
+  border-top: 2px solid var(--border-dark);
+  background: var(--c-bg-subtle);
 }
 
 .footer-content {
@@ -688,6 +713,7 @@ button {
 .footer-copy {
   font-family: var(--font-mono);
   font-size: 11px;
+  font-weight: 600;
   color: var(--text-muted);
 }
 

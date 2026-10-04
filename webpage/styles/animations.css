@@ -12,9 +12,9 @@
   z-index: 0;
   pointer-events: none;
   background: 
-    radial-gradient(circle at 15% 15%, rgba(143, 179, 226, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 85% 85%, rgba(49, 72, 122, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(30, 46, 79, 0.5) 0%, rgba(25, 35, 56, 1) 100%);
+    radial-gradient(circle at 10% 10%, rgba(225, 238, 252, 0.8) 0%, transparent 45%),
+    radial-gradient(circle at 90% 90%, rgba(217, 230, 247, 0.7) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(245, 248, 252, 0.6) 0%, rgba(255, 255, 255, 1) 100%);
   background-size: 200% 200%;
   animation: gradientMeshFlow 20s ease infinite alternate;
 }
@@ -33,7 +33,7 @@
 
 /* Animated Gradient Text */
 .gradient-text-animated {
-  background: linear-gradient(135deg, #D9E1F1 0%, #8FB3E2 40%, #31487A 75%, #8FB3E2 100%);
+  background: linear-gradient(135deg, #0B192C 0%, #1E3E62 45%, #004494 75%, #0B192C 100%);
   background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

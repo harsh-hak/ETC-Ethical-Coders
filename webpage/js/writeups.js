@@ -55,7 +55,6 @@ export const writeupsData = [
 
 export function initWriteups() {
   const container = document.getElementById('writeups-grid-container');
-  const filterBtns = document.querySelectorAll('.filter-btn');
   const modal = document.getElementById('writeup-modal');
   const modalTitle = document.getElementById('modal-title-text');
   const modalBody = document.getElementById('modal-body-content');
@@ -63,13 +62,10 @@ export function initWriteups() {
 
   if (!container) return;
 
-  function renderCards(filter = 'all') {
+  function renderCards() {
     container.innerHTML = '';
-    const filtered = filter === 'all' 
-      ? writeupsData 
-      : writeupsData.filter(w => w.category === filter || (filter === 'tryhackme' && w.platform === 'TryHackMe'));
 
-    filtered.forEach(item => {
+    writeupsData.forEach(item => {
       const card = document.createElement('div');
       card.className = 'writeup-card reveal';
       card.innerHTML = `
@@ -97,7 +93,7 @@ export function initWriteups() {
     modalTitle.textContent = item.title;
     
     let html = item.fullContent
-      .replace(/!\[(.*?)\]\((.*?)\)/gim, '<div style="margin: 20px 0; text-align: center;"><img src="$2" alt="$1" style="max-width: 100%; height: auto; border: 2px solid var(--c-yinmn);"><br><em style="font-size: 12px; color: var(--text-muted);">$1</em></div>')
+      .replace(/!\[(.*?)\]\((.*?)\)/gim, '<div style="margin: 20px 0; text-align: center;"><img src="$2" alt="$1" style="max-width: 100%; height: auto; border: 2px solid var(--border-dark); box-shadow: var(--shadow-brutal-sm);"><br><em style="font-size: 12px; color: var(--text-muted);">$1</em></div>')
       .replace(/^### (.*$)/gim, '<h3>$1</h3>')
       .replace(/^## (.*$)/gim, '<h2>$1</h2>')
       .replace(/^# (.*$)/gim, '<h1>$1</h1>')
@@ -108,8 +104,8 @@ export function initWriteups() {
       .replace(/`([^`]+)`/gim, '<code>$1</code>')
       .replace(/\n\n/gim, '<br><br>');
 
-    // Fix relative image links if they point inside Tryhackme
-    html = html.replace(/src="assets\//gim, 'src="Tryhackme/assets/');
+    // Relative image links from webpage/ to Tryhackme/assets
+    html = html.replace(/src="assets\//gim, 'src="../Tryhackme/assets/');
 
     modalBody.innerHTML = html;
     modal.classList.add('is-active');
@@ -133,14 +129,6 @@ export function initWriteups() {
     if (e.key === 'Escape' && modal && modal.classList.contains('is-active')) {
       closeModal();
     }
-  });
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      renderCards(btn.getAttribute('data-filter'));
-    });
   });
 
   renderCards();

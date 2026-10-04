@@ -19,7 +19,7 @@ def test_all_devices():
             permissions=['clipboard-read', 'clipboard-write']
         )
         page_desk = context_desktop.new_page()
-        page_desk.goto('http://localhost:8000', wait_until='networkidle')
+        page_desk.goto('http://localhost:8000/webpage/', wait_until='networkidle')
         
         # Verify Title & Brand
         title = page_desk.title()
@@ -29,6 +29,12 @@ def test_all_devices():
         # Check brand logo
         logo = page_desk.locator('.brand-logo-img')
         assert logo.is_visible(), "Brand logo is visible"
+        
+        # Verify Headline
+        headline = page_desk.locator('.hero-headline').inner_text()
+        print(f"Headline: {headline}")
+        assert "Where Challenges" in headline
+        assert "Become Skills" in headline
         
         # Verify Navigation links are clean and have MEMBERS
         nav_text = page_desk.locator('.nav-links').inner_text()
@@ -61,7 +67,7 @@ def test_all_devices():
         print("\n=== Test 2: Tablet Viewport (768x1024) ===")
         context_tab = browser.new_context(viewport={'width': 768, 'height': 1024})
         page_tab = context_tab.new_page()
-        page_tab.goto('http://localhost:8000', wait_until='networkidle')
+        page_tab.goto('http://localhost:8000/webpage/', wait_until='networkidle')
         scroll_w_tab = page_tab.evaluate('document.documentElement.scrollWidth')
         assert scroll_w_tab <= 768 + 1, f"Tablet horizontal overflow: {scroll_w_tab}px"
         page_tab.screenshot(path='tests/screenshots/tablet_portfolio.png', full_page=True)
@@ -71,7 +77,7 @@ def test_all_devices():
         print("\n=== Test 3: Mobile Large Viewport (390x844) ===")
         context_mobile = browser.new_context(viewport={'width': 390, 'height': 844}, is_mobile=True, has_touch=True)
         page_mob = context_mobile.new_page()
-        page_mob.goto('http://localhost:8000', wait_until='networkidle')
+        page_mob.goto('http://localhost:8000/webpage/', wait_until='networkidle')
         
         scroll_w_mob = page_mob.evaluate('document.documentElement.scrollWidth')
         assert scroll_w_mob <= 390 + 1, f"Mobile horizontal overflow: {scroll_w_mob}px"
@@ -94,7 +100,7 @@ def test_all_devices():
         print("\n=== Test 4: Mobile Small Viewport (360x640) ===")
         context_mob_small = browser.new_context(viewport={'width': 360, 'height': 640}, is_mobile=True, has_touch=True)
         page_mob_small = context_mob_small.new_page()
-        page_mob_small.goto('http://localhost:8000', wait_until='networkidle')
+        page_mob_small.goto('http://localhost:8000/webpage/', wait_until='networkidle')
         scroll_w_sm = page_mob_small.evaluate('document.documentElement.scrollWidth')
         assert scroll_w_sm <= 360 + 1, f"Small mobile horizontal overflow: {scroll_w_sm}px"
         print("Small mobile layout verified (0 horizontal overflow).")

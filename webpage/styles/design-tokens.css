@@ -1,0 +1,83 @@
+/* ==========================================================================
+   ETC (Ethical Coders) - White & Navy Blue Minimal Brutalism Tokens
+   Typography: Armstrong & Neutral Sans-Serif (Inter)
+   Palette:
+   - Pure White:    #FFFFFF (Primary Background & Card Canvas)
+   - Ice Light:     #F5F8FC (Subtle Canvas / Stat Boxes / Tag Fills)
+   - Deep Navy:     #0B192C (Headlines, Borders, Primary CTA Buttons, Text)
+   - Rich Navy:     #1E3E62 (Secondary Badges, Accent Borders)
+   - Slate Navy:    #334E68 (Body Text, Descriptions)
+   - Muted Slate:   #627D98 (Subtext, Timestamps, Secondary Tags)
+   ========================================================================== */
+
+:root {
+  /* White & Navy Base Colors */
+  --c-white: #FFFFFF;
+  --c-bg: #FFFFFF;
+  --c-bg-subtle: #F5F8FC;
+  --c-bg-card: #FFFFFF;
+  --c-bg-hover: #EDF2F7;
+
+  /* Navy Hierarchy */
+  --c-navy-dark: #0B192C;
+  --c-navy-primary: #1E3E62;
+  --c-navy-soft: #2E5B88;
+  --c-navy-accent: #004494;
+  --c-ice-border: #D9E2EC;
+  --c-ice-tag: #EBF3FA;
+
+  /* Semantic Layers */
+  --bg-deep: #FFFFFF;
+  --bg-base: #FFFFFF;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F5F8FC;
+  --bg-surface-trans: rgba(255, 255, 255, 0.95);
+
+  /* Borders & Grid (Minimal Brutalism) */
+  --border-dark: #0B192C;
+  --border-subtle: #D9E2EC;
+  --border-grid: #0B192C;
+  --border-accent: #1E3E62;
+  --border-light: #BCCCDC;
+
+  /* Text Hierarchy */
+  --text-pure: #0B192C;
+  --text-primary: #0B192C;
+  --text-secondary: #334E68;
+  --text-muted: #627D98;
+  --text-dark: #0B192C;
+  --text-inverted: #FFFFFF;
+
+  /* Brutalist Geometric Drop Shadows */
+  --shadow-brutal-sm: 2px 2px 0px #0B192C;
+  --shadow-brutal-md: 4px 4px 0px #0B192C;
+  --shadow-brutal-lg: 6px 6px 0px #0B192C;
+  --shadow-brutal-hover: 6px 6px 0px #1E3E62;
+
+  /* Animated Gradients */
+  --grad-primary: linear-gradient(135deg, #0B192C 0%, #1E3E62 60%, #004494 100%);
+  --grad-surface: linear-gradient(180deg, #FFFFFF 0%, #F5F8FC 100%);
+  --grad-animated-border: linear-gradient(90deg, #0B192C, #1E3E62, #627D98, #1E3E62, #0B192C);
+
+  /* Typography: Armstrong + Neutral Sans-serif (Inter) + Monospace */
+  --font-display: 'Armstrong', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /* Fluid Scales */
+  --text-xs: clamp(0.72rem, 0.68rem + 0.2vw, 0.8rem);
+  --text-sm: clamp(0.82rem, 0.78rem + 0.25vw, 0.92rem);
+  --text-base: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
+  --text-lg: clamp(1.1rem, 1rem + 0.5vw, 1.25rem);
+  --text-xl: clamp(1.3rem, 1.15rem + 0.75vw, 1.55rem);
+  --text-2xl: clamp(1.6rem, 1.35rem + 1.25vw, 2.1rem);
+  --text-3xl: clamp(2.2rem, 1.8rem + 2vw, 3rem);
+  --text-4xl: clamp(2.8rem, 2.2rem + 3vw, 4.4rem);
+
+  /* Layout Spacing */
+  --container-max: 1200px;
+  --container-pad: clamp(1rem, 4vw, 2.5rem);
+  --header-height: 72px;
+  --radius-sharp: 0px;
+  --radius-card: 2px;
+}

@@ -9,7 +9,7 @@ import json
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRYHACKME_DIR = os.path.join(BASE_DIR, 'Tryhackme')
-WRITEUPS_JS = os.path.join(BASE_DIR, 'js', 'writeups.js')
+WRITEUPS_JS = os.path.join(BASE_DIR, 'webpage', 'js', 'writeups.js')
 
 def sync_writeups():
     if not os.path.exists(TRYHACKME_DIR):
@@ -66,7 +66,7 @@ def sync_writeups():
                 'fullContent': content
             })
 
-    # Write back to js/writeups.js
+    # Write back to webpage/js/writeups.js
     js_content = f"""/**
  * ETC (Ethical Coders) - Writeups Catalog & Modal Reader
  * Auto-synced from Tryhackme/ markdown files
@@ -76,7 +76,6 @@ export const writeupsData = {json.dumps(writeups, indent=2)};
 
 export function initWriteups() {{
   const container = document.getElementById('writeups-grid-container');
-  const filterBtns = document.querySelectorAll('.filter-btn');
   const modal = document.getElementById('writeup-modal');
   const modalTitle = document.getElementById('modal-title-text');
   const modalBody = document.getElementById('modal-body-content');
@@ -84,13 +83,10 @@ export function initWriteups() {{
 
   if (!container) return;
 
-  function renderCards(filter = 'all') {{
+  function renderCards() {{
     container.innerHTML = '';
-    const filtered = filter === 'all' 
-      ? writeupsData 
-      : writeupsData.filter(w => w.category === filter || (filter === 'tryhackme' && w.platform === 'TryHackMe'));
 
-    filtered.forEach(item => {{
+    writeupsData.forEach(item => {{
       const card = document.createElement('div');
       card.className = 'writeup-card reveal';
       card.innerHTML = `
@@ -118,7 +114,7 @@ export function initWriteups() {{
     modalTitle.textContent = item.title;
     
     let html = item.fullContent
-      .replace(/!\\[(.*?)\\]\\((.*?)\\)/gim, '<div style="margin: 20px 0; text-align: center;"><img src="$2" alt="$1" style="max-width: 100%; height: auto; border: 2px solid var(--c-yinmn);"><br><em style="font-size: 12px; color: var(--text-muted);">$1</em></div>')
+      .replace(/!\\[(.*?)\\]\\((.*?)\\)/gim, '<div style="margin: 20px 0; text-align: center;"><img src="$2" alt="$1" style="max-width: 100%; height: auto; border: 2px solid var(--border-dark); box-shadow: var(--shadow-brutal-sm);"><br><em style="font-size: 12px; color: var(--text-muted);">$1</em></div>')
       .replace(/^### (.*$)/gim, '<h3>$1</h3>')
       .replace(/^## (.*$)/gim, '<h2>$1</h2>')
       .replace(/^# (.*$)/gim, '<h1>$1</h1>')
@@ -129,8 +125,8 @@ export function initWriteups() {{
       .replace(/`([^`]+)`/gim, '<code>$1</code>')
       .replace(/\\n\\n/gim, '<br><br>');
 
-    // Fix relative image links if they point inside Tryhackme
-    html = html.replace(/src="assets\\//gim, 'src="Tryhackme/assets/');
+    // Relative image links from webpage/ to Tryhackme/assets
+    html = html.replace(/src="assets\\//gim, 'src="../Tryhackme/assets/');
 
     modalBody.innerHTML = html;
     modal.classList.add('is-active');
@@ -156,14 +152,6 @@ export function initWriteups() {{
     }}
   }});
 
-  filterBtns.forEach(btn => {{
-    btn.addEventListener('click', () => {{
-      filterBtns.forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      renderCards(btn.getAttribute('data-filter'));
-    }});
-  }});
-
   renderCards();
 }}
 """
@@ -171,7 +159,7 @@ export function initWriteups() {{
     with open(WRITEUPS_JS, 'w', encoding='utf-8') as f:
         f.write(js_content)
 
-    print(f" Successfully synced {len(writeups)} writeups into js/writeups.js!")
+    print(f" Successfully synced {len(writeups)} writeups into webpage/js/writeups.js!")
 
 if __name__ == '__main__':
     sync_writeups()
