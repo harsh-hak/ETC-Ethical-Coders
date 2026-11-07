@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/images/logo.svg" width="120" height="120" alt="ETC (Ethical Coders) Logo" />
+  <img src="assets/images/logo.png" width="160" height="160" alt="ETC (Ethical Coders) Logo" />
 </p>
 
 <h1 align="center">ETC (Ethical Coders)</h1>
