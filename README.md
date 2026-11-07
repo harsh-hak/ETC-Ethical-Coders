@@ -95,7 +95,8 @@ Meet the six students and friends who make up **ETC (Ethical Coders)**:
       <code>CRYPTOGRAPHY</code><br>
       <em>// Secret Codes & Math Puzzles</em><br><br>
       Loves solving mathematical riddles, decoding encrypted messages, and learning how modern data privacy algorithms protect information.<br><br>
-      <code>#SecretCodes</code> <code>#MathPuzzles</code> <code>#DataPrivacy</code>
+      <code>#SecretCodes</code> <code>#MathPuzzles</code> <code>#DataPrivacy</code><br><br>
+      <img src="https://img.shields.io/badge/🏆%20UNI6CTF%202.0-Best%20Female%20CTF%20Player%20(7%2C400%20pts)-D97706?style=flat-square" alt="Best Female CTF Player UNI6CTF 2.0" />
     </td>
     <td align="center" width="50%">
       <img src="assets/images/avatars/zalak.svg" width="75" height="75" alt="Zalak" /><br>

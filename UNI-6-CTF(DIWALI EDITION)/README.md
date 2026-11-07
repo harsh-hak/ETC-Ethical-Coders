@@ -43,7 +43,7 @@ During **UNI6CTF 2.0 (Diwali Edition)**, members of **ETC (Ethical Coders)** com
           </tr>
           <tr>
             <td><strong>Shloka Kamdar</strong></td>
-            <td>Cryptography</td>
+            <td>Cryptography<br><code>🏆 BEST FEMALE CTF PLAYER</code></td>
             <td align="right"><strong>7,400 pts</strong></td>
           </tr>
           <tr>
@@ -95,6 +95,10 @@ During **UNI6CTF 2.0 (Diwali Edition)**, members of **ETC (Ethical Coders)** com
   </tr>
 </table>
 
+> [!TIP]
+> ### 🌟 Special Recognition: Best Female CTF Player — Shloka Kamdar
+> **Shloka Kamdar** achieved the prestigious title of **Best Female CTF Player** in **UNI6CTF 2.0 (Diwali Edition)**, securing **7,400 points solo** (contributing over 62% of ETC 1's total 11,915 points)! Her mastery of advanced cryptography and forensics was a cornerstone of ETC's leaderboard success.
+
 ---
 
 ## 📚 Challenge Index & Writeups
@@ -130,7 +134,8 @@ UNI-6-CTF(DIWALI EDITION)/
     └── images/
         ├── logo.png                    # Official UNI6CTF 2.0 Logo
         ├── etc1_scoreboard.jpg         # ETC 1 15th Place Official Scoreboard
-        └── digital_shadow_scoreboard.jpg # DIGITAL_SHADOW 16th Place Official Scoreboard
+        ├── digital_shadow_scoreboard.jpg # DIGITAL_SHADOW 16th Place Official Scoreboard
+        └── shloka_best_female_player.png # Best Female CTF Player Official Recognition
 ```
 
 ---
