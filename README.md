@@ -18,7 +18,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Team%20Size-06%20Members-0B192C?style=flat-square" alt="Team Size" />
   <img src="https://img.shields.io/badge/Challenges%20Solved-100%2B-1E3E62?style=flat-square" alt="Challenges Solved" />
-  <img src="https://img.shields.io/badge/CTF%20Platforms-TryHackMe%20%26%20Labs-004494?style=flat-square" alt="CTF Platforms" />
+  <img src="https://img.shields.io/badge/Competitions-UNI6CTF%202.0%20%7C%20THM-004494?style=flat-square" alt="Competitions" />
   <img src="https://img.shields.io/badge/Research-100%25%20Ethical%20%26%20Open-2E5B88?style=flat-square" alt="Ethical & Open" />
 </p>
 
@@ -134,6 +134,7 @@ All of our writeups and playbooks are written in markdown with embedded screensh
 
 | Document | Type | Platform | Key Topics & Techniques | Link |
 | :--- | :--- | :--- | :--- | :---: |
+| **UNI6CTF 2.0 (Diwali Edition)** | Full Event Showcase & 7 Writeups | UNI6CTF 2.0 | Dual-Team Finish (ETC 1: 15th, DIGITAL_SHADOW: 16th, 23,740 pts); Unity .NET reversing, OSINT footprinting, ext4 xattr carving, blind SQLi log analysis, crawler robots.txt, steganography | [Read Showcase ↗](UNI-6-CTF(DIWALI%20EDITION)/README.md) |
 | **CatPictures-II Walkthrough** | Full CTF Report | TryHackMe | Image metadata stego, OliveTin RCE, LinPEAS, CVE-2021-3156 (Baron Samedit) root privilege escalation with screenshots | [Read Guide ↗](Tryhackme/CatPictures-II_Full_Walkthrough.md) |
 | **U.A. High School Playbook** | Command Playbook | TryHackMe | Reconnaissance, Web command injection, Magic bytes header repair, `eval` sudo root escalation | [Read Guide ↗](Tryhackme/UA_High_School_CTF_Command_Playbook.md) |
 | **CTF Command Arsenal** | 10-Phase Cheat Sheet | All Platforms | Comprehensive command reference: Nmap, Gobuster, Ffuf, Reverse shells, Steghide, Hashcat, LinPEAS, GTFOBins | [Read Guide ↗](Tryhackme/CTF_Command_Arsenal.md) |
